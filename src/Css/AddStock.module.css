@@ -1,0 +1,18 @@
+p{
+font-family: monospace;
+}
+
+.s2{
+  font-family:Candara;
+  font-size:20px;
+  background-color: #152733;
+  height: 650px;
+  width: 100%;
+  color:aliceblue;
+  align-items: center;
+  justify-content: center;
+ 
+}
+hr{
+  color: aliceblue;
+}
