@@ -19,6 +19,14 @@ const userSchema = new Schema({
         type:String,
         required:true
     },
+    cost:{
+        type:String,
+        required:true
+    },
+    pub:{
+        type:String,
+        required:true
+    },
     joinedOn:{
         type:Date,
         default:Date.now,

@@ -4,8 +4,15 @@ export default function Home()
 {
     return(
         <>
-     
-            <center><img src={i} alt="Err" height={600} width={600}/></center>
+
+
+            <div className="row">
+            <div className="col-md-12">
+                  <center><img src={i} alt="Err" height={600} width={600}/></center>
+            </div> 
+          
+            </div>     
+
 
 
         </>

@@ -47,6 +47,9 @@ const ContactList= ()=>{
                         <th>AUTHOR</th>
                         <th>COPIES AVAILABLE</th>
                         <th>RACK NUMBER</th>
+                        <th>PUBLISHER NAME</th>
+                        <th>COST</th>
+
                         <th>EDIT</th>
                         <th>TRASH</th>
                       </tr>
@@ -58,6 +61,8 @@ const ContactList= ()=>{
                         <td>{m.Aname}</td>
                         <td>{m.cpy}</td>
                         <td>{m.isbn}</td>
+                        <td>{m.pub}</td>
+                        <td>{m.cost}</td>
                         <td> <Link  to={`/EditContact/${m._id}`}>
                         <TfiPencilAlt color="black" size={25}/></Link> </td>
                         <td>

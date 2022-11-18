@@ -41,10 +41,10 @@ app.delete('/:id',async(req,res)=>{
 
 app.post('/edit/:id',async(req,res)=>{
     const {id}=req.params;
-    const {Sname,Aname,cpy,isbn} = req.body
+    const {Sname,Aname,cpy,isbn,cost,pub} = req.body
     console.log({...req.params})
     try {
-        await User.findOneAndUpdate({_id:id},{Sname,Aname,cpy,isbn})
+        await User.findOneAndUpdate({_id:id},{Sname,Aname,cpy,isbn,cost,pub})
         res.status(200).send('success')
     } catch (error) {
         res.status(500).send(error.message)

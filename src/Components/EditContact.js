@@ -22,6 +22,8 @@ const EditContact  = () => {
                     setAname(user.Aname)
                     setCpy(user.cpy)
                     setIsbn(user.isbn)
+                    setCost(user.cost)
+                    setPub(user.pub)
                     
                     
                     setDis(true)
@@ -32,6 +34,8 @@ const EditContact  = () => {
     const [Aname,setAname]=useState('')
     const [cpy,setCpy]=useState('')
     const [isbn,setIsbn]=useState('')
+    const [cost,setCost]=useState('')
+    const [pub,setPub]=useState('')
 
 
     const handleSubmit =async (e) =>{
@@ -50,7 +54,7 @@ const EditContact  = () => {
                         <p className="h4 text-primary fw-bold">
                             Edit Details
                         </p>
-                        <p className='fst-italic'>oooo</p>
+                        <p className='fst-italic'></p>
                     </div>
                 </div>
                 {dis && 
@@ -70,8 +74,16 @@ const EditContact  = () => {
                                    <input type="number" className='form-control' value={cpy} onChange={e => setCpy(e.target.value)}/>
                                 </div>  
                                 <div className="mb-2">
-                                <label className="form-label">ISBN</label>
+                                <label className="form-label">Rack number</label>
                                    <input type="number" className='form-control' value={isbn} onChange={e => setIsbn(e.target.value)} />
+                                </div>  
+                                <div className="mb-2">
+                                <label className="form-label">Cost</label>
+                                   <input type="number" className='form-control' value={cost} onChange={e => setIsbn(e.target.value)} />
+                                </div>  
+                                <div className="mb-2">
+                                <label className="form-label">Publisher Name</label>
+                                   <input type="text" className='form-control' value={pub} onChange={e => setIsbn(e.target.value)} />
                                 </div>  
                               
                               

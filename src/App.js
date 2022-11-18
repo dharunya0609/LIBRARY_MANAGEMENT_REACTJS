@@ -37,10 +37,6 @@ function App() {
                         element={<BookCart/>}></Route>
                     <Route exact path="/EditContact/:contactId"
                         element={<EditContact/>}></Route>
-
-
-                   
-
                 </Routes>
             </BrowserRouter>
         </>

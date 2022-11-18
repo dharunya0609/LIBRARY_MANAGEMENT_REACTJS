@@ -10,12 +10,14 @@ const AddContact = () => {
     const [Aname, setAname] = useState('')
     const [cpy, setCpy] = useState('')
     const [isbn, setIsbn] = useState('')
+    const [cost, setCost] = useState('')
+    const [pub, setPub] = useState('')
 
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const {data} = await axios.post('http://localhost:8080/signup', {Sname, Aname, cpy, isbn})
+        const {data} = await axios.post('http://localhost:8080/signup', {Sname, Aname, cpy, isbn,cost,pub})
         navigate('/bookCart')
     }
     return (
@@ -68,6 +70,26 @@ const AddContact = () => {
                                         onChange={
                                             e => setIsbn(e.target.value)
                                         }/>
+
+                                </div>
+                                <div className="mb-2">
+                                    <label className="form-label">PUBLISHER NAME</label>
+                                    <input type="text" className='form-control'
+                                        value={pub}
+                                        onChange={
+                                            e => setPub(e.target.value)
+                                        }/>
+                                        
+                                </div>
+                                
+                                <div className="mb-2">
+                                    <label className="form-label">Cost</label>
+                                    <input type="number" className='form-control'
+                                        value={cost}
+                                        onChange={
+                                            e => setCost(e.target.value)
+                                        }/>
+                                        
                                 </div>
 
 
